@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Memory Leak View Controller-->
+        <scene sceneID="1Yf-tI-Gcd">
+            <objects>
+                <viewController storyboardIdentifier="MemoryLeakViewController" id="HYw-Zu-fi2" customClass="MemoryLeakViewController" customModule="LeakCheckDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="edD-Nx-y6e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0be-Cr-LQf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHi-4j-p0K">
+                                        <rect key="frame" x="63.5" y="0.0" width="248.5" height="333.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOt-Dh-kgu">
+                                        <rect key="frame" x="81.5" y="333.5" width="212" height="333.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal" title="increment"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QfG-cS-eWS" firstAttribute="bottom" secondItem="0be-Cr-LQf" secondAttribute="bottom" id="04a-QU-I9C"/>
+                            <constraint firstItem="0be-Cr-LQf" firstAttribute="leading" secondItem="edD-Nx-y6e" secondAttribute="leading" id="17U-zc-cPN"/>
+                            <constraint firstItem="0be-Cr-LQf" firstAttribute="top" secondItem="edD-Nx-y6e" secondAttribute="top" id="USX-YQ-WwI"/>
+                            <constraint firstAttribute="trailing" secondItem="0be-Cr-LQf" secondAttribute="trailing" id="ac9-Pk-9JI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QfG-cS-eWS"/>
+                    </view>
+                    <connections>
+                        <outlet property="countLabel" destination="OHi-4j-p0K" id="Frz-Bn-5WQ"/>
+                        <outlet property="incrementButton" destination="hOt-Dh-kgu" id="WK9-kw-dC4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hxd-7W-uhi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263" y="150"/>
+        </scene>
+    </scenes>
+</document>
