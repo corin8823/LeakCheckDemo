@@ -31,6 +31,7 @@ final class MemoryLeakViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Memory Leak"
 
         let closeButton = UIBarButtonItem(barButtonSystemItem: .stop, target: nil, action: nil)
         closeButton.rx.tap

@@ -31,6 +31,7 @@ final class NormalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Normal"
 
         let closeButton = UIBarButtonItem(barButtonSystemItem: .stop, target: nil, action: nil)
         closeButton.rx.tap

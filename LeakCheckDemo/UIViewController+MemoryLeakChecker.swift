@@ -26,12 +26,12 @@ extension UIViewController {
 private extension UIViewController {
 
     func checkLeak(afterDelay delay: TimeInterval = 1.5) {
-        if self.isMovingFromParentViewController || self.rootParentViewController.isBeingDismissed {
-            let disappearance = isMovingFromParentViewController ? "removed from its parent" : "dismissed"
+        if isMovingFromParentViewController || rootParentViewController.isBeingDismissed {
+            let reason = isMovingFromParentViewController ? "removed from its parent" : "dismissed"
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
                 if let wself = self {
                     #if DEBUG
-                        print("🚰 \(String(describing: wself)) not deallocated after being \(disappearance)")
+                        print("🚰 \(String(describing: wself)) not deallocated after being \(reason)")
                     #endif
                 }
             }
